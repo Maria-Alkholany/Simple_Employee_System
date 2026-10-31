@@ -1,0 +1,11 @@
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\bin\Debug\Employee System.exe.config
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\bin\Debug\Employee System.exe
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\bin\Debug\Employee System.pdb
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee System.csprojAssemblyReference.cache
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee_System.Form1.resources
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee_System.Properties.Resources.resources
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee System.csproj.GenerateResource.cache
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee System.csproj.CoreCompileInputs.cache
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee System.exe
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee System.pdb
+C:\Users\Elite\Desktop\c#.2\Employee System\Employee System\obj\Debug\Employee_System.All_Employee_Information.resources
