@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnShowAllWithImages = new System.Windows.Forms.Button();
             this.btnSelectImage = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.myTimer = new System.Windows.Forms.Timer(this.components);
+            this.labTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctEmpolyeeImage)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +53,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.labTime);
             this.panel1.Controls.Add(this.btnShowAllWithImages);
             this.panel1.Controls.Add(this.btnSelectImage);
             this.panel1.Controls.Add(this.btnExit);
@@ -229,6 +233,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee Information";
             // 
+            // myTimer
+            // 
+            this.myTimer.Enabled = true;
+            this.myTimer.Interval = 1000;
+            this.myTimer.Tick += new System.EventHandler(this.MyTimer_Tick);
+            // 
+            // labTime
+            // 
+            this.labTime.AutoSize = true;
+            this.labTime.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labTime.Location = new System.Drawing.Point(945, 58);
+            this.labTime.Name = "labTime";
+            this.labTime.Size = new System.Drawing.Size(0, 40);
+            this.labTime.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 40F);
@@ -266,6 +285,8 @@
         private System.Windows.Forms.Button btnFound;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnShowAllWithImages;
+        private System.Windows.Forms.Timer myTimer;
+        private System.Windows.Forms.Label labTime;
     }
 }
 

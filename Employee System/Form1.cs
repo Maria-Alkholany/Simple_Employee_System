@@ -258,5 +258,10 @@ namespace Employee_System
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void MyTimer_Tick(object sender, EventArgs e)
+        {
+            labTime.Text = DateTime.Now.ToString();
+        }
     }
 }
