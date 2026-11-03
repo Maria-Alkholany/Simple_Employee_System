@@ -29,7 +29,7 @@ namespace Employee_System
             Application.Exit();
         }
 
-       
+
         private void BtnSave_Click(object sender, EventArgs e)
         {
             try
@@ -109,7 +109,7 @@ namespace Employee_System
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void BtnShowAll_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace Employee_System
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void BtnSelectImage_Click(object sender, EventArgs e)
@@ -207,7 +207,7 @@ namespace Employee_System
             AllInfoWithImages.Font = this.Font;
             AllInfoWithImages.Size = this.Size;
 
-           
+
             try
             {
                 string FileName = "Empolyee Information.txt";
@@ -218,9 +218,9 @@ namespace Employee_System
                 do
                 {
                     line = reader.ReadLine();
-                    if(line != null)
+                    if (line != null)
                     {
-                       
+
 
                         PictureBox picture = new PictureBox();
                         picture.Left = 10;
@@ -232,13 +232,13 @@ namespace Employee_System
                         TextBox txtInfo = new TextBox();
                         txtInfo.Left = 10;
                         txtInfo.Width = 250;
-                        txtInfo.Top = myTop+150;
+                        txtInfo.Top = myTop + 150;
                         txtInfo.Text = line;
 
                         string imagePath = "images/" + line.Split('|')[0].Trim() + ".jpg";
                         if (File.Exists(imagePath))
                             picture.Image = Image.FromFile(imagePath);
-                        
+
 
 
                         AllInfoWithImages.Controls.Add(picture);
@@ -262,6 +262,84 @@ namespace Employee_System
         private void MyTimer_Tick(object sender, EventArgs e)
         {
             labTime.Text = DateTime.Now.ToString();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            //    try
+            //    {
+            //        if (string.IsNullOrWhiteSpace(txtID.Text))
+            //        {
+            //            MessageBox.Show("Please Enter The ID", "Empty ID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //            return;
+            //        }
+
+            //        const string FileName = "Empolyee Information.txt";
+            //        string[] Info = new string[3];
+
+            //        using (StreamReader reader = new StreamReader(FileName))
+            //        {
+            //            string lineFromFile;
+            //            bool found = false;
+            //            while ((lineFromFile = reader.ReadLine()) != null)
+            //            {
+            //                Info = lineFromFile.Split('|');
+            //                if (Info.Length >= 3 && txtID.Text.Trim() == Info[0].Trim())
+            //                {
+            //                    //txtID.Text = Info[0];
+            //                    Info[1] = txtName.Text;
+            //                    Info[2] = txtAddress.Text;
+            //                    string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "images/" + Info[0].Trim() + ".jpg");
+            //                    if (File.Exists(imagePath))
+            //                    {
+            //                        using (pctEmpolyeeImage.Image = Image.FromFile(imagePath))
+            //                        {
+            //                            pctEmpolyeeImage.Image = new Bitmap(imagePath);
+            //                        }
+            //                    }
+            //                    else
+            //                    {
+            //                        MessageBox.Show("Can Not Find This Image", "Didn't Found Image", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //                    }
+            //                    found = true;
+            //                    //return;
+            //                }
+            //            }
+
+            //            if (!found)
+            //            {
+            //                MessageBox.Show("Can Not Find This ID", "Didn't Found ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            }
+            //        }
+
+            //        using (StreamWriter writer = new StreamWriter(FileName))
+            //        {
+            //            string line = txtID.Text + "|" + Info[1] + "|" + Info[2];
+            //            writer.WriteLine(line);
+
+            //            if (!Directory.Exists("images"))
+            //            {
+            //                Directory.CreateDirectory("images");
+            //            }
+            //            pctEmpolyeeImage.Image.Save("images/" + txtID.Text + ".jpg");
+            //        }
+
+            //        MessageBox.Show("Employee Edited Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //        txtID.Text = "";
+            //        txtID.Focus();
+            //        txtName.Text = "";
+            //        txtAddress.Text = "";
+            //        pctEmpolyeeImage.Image = new PictureBox().Image;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message);
+            //        //}
+
+            //    }
+            
+
         }
     }
 }

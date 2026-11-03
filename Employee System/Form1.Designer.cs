@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.labTime = new System.Windows.Forms.Label();
             this.btnShowAllWithImages = new System.Windows.Forms.Button();
             this.btnSelectImage = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -45,7 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.myTimer = new System.Windows.Forms.Timer(this.components);
-            this.labTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctEmpolyeeImage)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +55,8 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.labTime);
             this.panel1.Controls.Add(this.btnShowAllWithImages);
             this.panel1.Controls.Add(this.btnSelectImage);
@@ -73,6 +77,43 @@
             this.panel1.Size = new System.Drawing.Size(1264, 623);
             this.panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(707, 416);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 60);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(485, 416);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(196, 60);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // labTime
+            // 
+            this.labTime.AutoSize = true;
+            this.labTime.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labTime.Location = new System.Drawing.Point(945, 58);
+            this.labTime.Name = "labTime";
+            this.labTime.Size = new System.Drawing.Size(0, 40);
+            this.labTime.TabIndex = 14;
+            // 
             // btnShowAllWithImages
             // 
             this.btnShowAllWithImages.BackColor = System.Drawing.Color.SteelBlue;
@@ -81,7 +122,7 @@
             this.btnShowAllWithImages.ForeColor = System.Drawing.Color.White;
             this.btnShowAllWithImages.Location = new System.Drawing.Point(30, 416);
             this.btnShowAllWithImages.Name = "btnShowAllWithImages";
-            this.btnShowAllWithImages.Size = new System.Drawing.Size(836, 60);
+            this.btnShowAllWithImages.Size = new System.Drawing.Size(424, 60);
             this.btnShowAllWithImages.TabIndex = 13;
             this.btnShowAllWithImages.Text = "Show All With Images";
             this.btnShowAllWithImages.UseVisualStyleBackColor = false;
@@ -107,9 +148,9 @@
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(680, 498);
+            this.btnExit.Location = new System.Drawing.Point(707, 498);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(186, 60);
+            this.btnExit.Size = new System.Drawing.Size(188, 60);
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -121,7 +162,7 @@
             this.btnShowAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShowAll.ForeColor = System.Drawing.Color.White;
-            this.btnShowAll.Location = new System.Drawing.Point(459, 498);
+            this.btnShowAll.Location = new System.Drawing.Point(485, 498);
             this.btnShowAll.Name = "btnShowAll";
             this.btnShowAll.Size = new System.Drawing.Size(196, 60);
             this.btnShowAll.TabIndex = 10;
@@ -135,9 +176,9 @@
             this.btnFound.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFound.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFound.ForeColor = System.Drawing.Color.White;
-            this.btnFound.Location = new System.Drawing.Point(245, 498);
+            this.btnFound.Location = new System.Drawing.Point(255, 498);
             this.btnFound.Name = "btnFound";
-            this.btnFound.Size = new System.Drawing.Size(186, 60);
+            this.btnFound.Size = new System.Drawing.Size(199, 60);
             this.btnFound.TabIndex = 9;
             this.btnFound.Text = "Found";
             this.btnFound.UseVisualStyleBackColor = false;
@@ -152,7 +193,7 @@
             this.btnSave.Location = new System.Drawing.Point(30, 498);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.btnSave.Size = new System.Drawing.Size(186, 60);
+            this.btnSave.Size = new System.Drawing.Size(202, 60);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -239,15 +280,6 @@
             this.myTimer.Interval = 1000;
             this.myTimer.Tick += new System.EventHandler(this.MyTimer_Tick);
             // 
-            // labTime
-            // 
-            this.labTime.AutoSize = true;
-            this.labTime.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labTime.Location = new System.Drawing.Point(945, 58);
-            this.labTime.Name = "labTime";
-            this.labTime.Size = new System.Drawing.Size(0, 40);
-            this.labTime.TabIndex = 14;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 40F);
@@ -285,8 +317,10 @@
         private System.Windows.Forms.Button btnFound;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnShowAllWithImages;
-        private System.Windows.Forms.Timer myTimer;
         private System.Windows.Forms.Label labTime;
+        private System.Windows.Forms.Timer myTimer;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
 
